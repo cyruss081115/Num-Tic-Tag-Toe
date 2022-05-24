@@ -17,6 +17,8 @@ class TicTagToe{
 private:
     int grid;
     Player player;
+    char printGridHelper(int gridPos);
+    void placeNum(int pos, int num);
 public:
     TicTagToe();
     TicTagToe(int);
@@ -33,16 +35,15 @@ public:
     void printGrid();
     
     // To determine whether player P can put the number num to position pos of grid
-    bool isPlaceable(int pos, int num, char p);
+    bool isPlaceable(int pos, int num);
     
     // Place the number num to position pos of grid.
     // The function returns true if the players makes a sum of 15 of three non-zero numbers on any row, column, or diagonal after putting the number, false otherwise
     bool putToGrid(int pos, int num);
     
-    void nextPlayer();
+    bool isFull();
     
-    // Driver function
-    void playGame();
+    void nextPlayer();
 };
 
 #endif /* tictagtoe_hpp */

@@ -8,25 +8,53 @@
 #include "tictagtoe.hpp"
 using namespace std;
 
-int TicTagToe:: gridContent(int pos) {
-    
-    if (pos < 1 || pos > 9) {
-        cout << "Unexpected pos input" << endl;
-        return -1;
-    }
-    
-    int mask = 1;
-    for (int i = 0; i < 9 - pos; i++) {
-        mask *= 10;
-    }
-    return grid / mask % 10;
-}
 
+void playGame() {
+//    TicTagToe ttt(6750120);
+//    ttt.printGrid();
+//    cout << ttt.putToGrid(2, 8) << endl;
+//    ttt.printGrid();
+    TicTagToe ttt = TicTagToe();
+    
+    int pos, num;
+    bool hasWinner = false;
+    bool boardIsFull = false;
+    
+    ttt.printGrid();
+
+    while (true){
+        // Prompt input from user
+        while (true) {
+            cout << "Player " << (ttt.getPlayer() == A ? 'A' : 'B') << "'s move (pos num): ";
+            cin >> pos; cin >> num;
+            if (ttt.isPlaceable(pos, num)) {
+                break;
+            }
+            cout << "Invalid! Try again." << endl;
+        }
+        
+        hasWinner = ttt.putToGrid(pos, num);
+        boardIsFull = ttt.isFull();
+        ttt.printGrid();
+        
+        if (hasWinner || boardIsFull) {
+            break;
+        }
+        ttt.nextPlayer();
+    }
+    
+    if (hasWinner) {
+        cout << "Player " << (ttt.getPlayer() == A ? 'A' : 'B') << " wins!" << endl;
+    } else if (boardIsFull) {
+        cout << "Draw Game!" << endl;
+    } else {
+        cout << "Unexpected Ending" << endl;
+    }
+}
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    TicTagToe ttt(406750120);
-    cout << ttt.getPlayer() << endl;
-    cout << ttt.gridContent(10) << endl;
+    // 406750120
+    playGame();
     return 0;
 }
