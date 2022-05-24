@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D519205283C004E00E43F67 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D519204283C004E00E43F67 /* main.cpp */; };
+		3D51920D283C007F00E43F67 /* tictagtoe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D51920B283C007F00E43F67 /* tictagtoe.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		3D519201283C004E00E43F67 /* Num Tic-Tag-Toe */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Num Tic-Tag-Toe"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D519204283C004E00E43F67 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3D51920B283C007F00E43F67 /* tictagtoe.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tictagtoe.cpp; sourceTree = "<group>"; };
+		3D51920C283C007F00E43F67 /* tictagtoe.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = tictagtoe.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,8 @@
 		3D519203283C004E00E43F67 /* Num Tic-Tag-Toe */ = {
 			isa = PBXGroup;
 			children = (
+				3D51920B283C007F00E43F67 /* tictagtoe.cpp */,
+				3D51920C283C007F00E43F67 /* tictagtoe.hpp */,
 				3D519204283C004E00E43F67 /* main.cpp */,
 			);
 			path = "Num Tic-Tag-Toe";
@@ -119,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D51920D283C007F00E43F67 /* tictagtoe.cpp in Sources */,
 				3D519205283C004E00E43F67 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
